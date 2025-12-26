@@ -2,7 +2,7 @@
 	"name": "gitversionview",
 	"displayName": "GitVersion View",
 	"description": "Display the actual git version of the current branch.",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"publisher": "HSSE-Development",
 	"engines": {
 		"vscode": "^1.107.0"
@@ -44,6 +44,11 @@
 						"type": "string",
 						"default": "SemVer",
 						"description": "Specify the version format. Example: InformationalVersion, SemVer, MajorMinorPatch..."
+					},
+					"gitVersionView.command": {
+						"type": "string",
+						"default": "gitversion",
+						"description": "Specify the command of gitversion. Example: gitversion, dotnet-gitversion"
 					}
 				}
 			}
