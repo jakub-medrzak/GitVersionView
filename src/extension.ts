@@ -243,6 +243,8 @@ class GitVersionView {
 	}
 
 	private getVersionFormatSetting(): string {
+		let found = false;
+
 		let configVersionFormat = workspace.getConfiguration("gitVersionView").get("versionFormat");
 		return <string>configVersionFormat;
 	}
