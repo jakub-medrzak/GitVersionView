@@ -128,14 +128,17 @@ class GitVersionView {
 
 	private statusBarItem: StatusBarItem;
 	private rootFolderPath: string;
+	private command: string;
 	private versionFormat: string;
 	private statusBarItemText: string;
 	private infoMessageText: string;
 
 	//TODO: Complete GitVersion Variable List
 	private versionFormatCheckList: Array<string> = ["SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"];
+	private commandCheckList: Array<string> = ["gitversion", "dotnet-gitversion"];
 
 	constructor(private clickActivation: string) {
+		this.command = undefined;
 		this.versionFormat = undefined;
 		this.rootFolderPath = undefined;
 		this.statusBarItemText = this.ErrorStatusBarMessage;
@@ -175,6 +178,15 @@ class GitVersionView {
 		if (!this.statusBarItem) {
 			this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
 			this.statusBarItem.command = this.clickActivation;
+		}
+
+		if(configChanged || !this.command) {
+			this.command = this.getCommandSetting();
+			let commandValid = this.checkIfCommandIsValid();
+			if (!commandValid) {
+				this.reportAnError("Extension settings are not valid. Command " + this.command + " is not valid!");
+				return;
+			}
 		}
 
 		if (configChanged || !this.versionFormat) {
@@ -218,7 +230,7 @@ class GitVersionView {
 
 	private async callGitVersion(): Promise<promiseResponse> {
 		
-		var executeCommand = `gitversion "${this.rootFolderPath}" -output json -showvariable ${this.versionFormat}`;
+		var executeCommand = `${this.command} "${this.rootFolderPath}" -output json -showvariable ${this.versionFormat}`;
 
 		let responseString = await asyncExec(executeCommand).then((stdout: string) => {
 			console.log(stdout);
@@ -246,6 +258,29 @@ class GitVersionView {
 		this.versionFormatCheckList.forEach((entry) => {
 			let currentEntry = entry.toLowerCase();
 			if (currentVersionFormat === currentEntry) {
+				found = true;
+			}
+		});
+
+		return found;
+	}
+
+	private getCommandSetting(): string {
+		let configCommand = workspace.getConfiguration("gitVersionView").get("command");
+		return <string>configCommand;
+	}
+
+	private checkIfCommandIsValid(): boolean {
+
+		if (!this.command) {
+			return false;
+		}
+
+		let found = false;
+		var currentCommand = this.command.toLowerCase();
+		this.commandCheckList.forEach((entry) => {
+			let currentEntry = entry.toLowerCase();
+			if (currentCommand === currentEntry) {
 				found = true;
 			}
 		});

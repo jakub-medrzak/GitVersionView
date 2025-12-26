@@ -19,6 +19,9 @@ This extension contributes the following settings:
 * `gitVersionView.versionFormat`: specify the output format [GitVersion Variables](https://gitversion.net/docs/more-info/variables)<br/> 
 Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
 
+* `gitVersionView.command`: Specify the command of gitversion.<br/>
+  Supported: "gitversion", "dotnet-gitversion"
+
 ## For more information
 * [GitHub Issues](https://github.com/HSSE-Dev/GitVersionView/issues)
 * [Email](HSSE-Development@outlook.com)
@@ -27,6 +30,11 @@ Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
 -----------------------------------------------------------------------------------------------------------
 
 ## Release Notes
+
+## 0.1.9
+- Update packages
+- Added option to change the command of gitversion (e.g. "dotnet-gitversion" instead of "gitversion")
+- Added FullSemVer to suppoted version formats
 
 ## 0.1.8
 - 0.1.7 VSIX package was published with wrong sources - my bad ;-)
