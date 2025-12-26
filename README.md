@@ -17,7 +17,7 @@ Install GitVersion on your system - see here
 This extension contributes the following settings:
 
 * `gitVersionView.versionFormat`: specify the output format [GitVersion Variables](https://gitversion.net/docs/more-info/variables)<br/> 
-Supported: "SemVer", "MajorMinorPatch", "InformationalVersion"
+Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
 
 ## For more information
 * [GitHub Issues](https://github.com/HSSE-Dev/GitVersionView/issues)

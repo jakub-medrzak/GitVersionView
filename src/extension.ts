@@ -133,7 +133,7 @@ class GitVersionView {
 	private infoMessageText: string;
 
 	//TODO: Complete GitVersion Variable List
-	private versionFormatCheckList: Array<string> = ["SemVer", "MajorMinorPatch", "InformationalVersion"];
+	private versionFormatCheckList: Array<string> = ["SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"];
 
 	constructor(private clickActivation: string) {
 		this.versionFormat = undefined;
