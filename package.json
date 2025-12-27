@@ -1,9 +1,9 @@
 {
-	"name": "gitversionview",
-	"displayName": "GitVersion View",
+	"name": "gitversionstatusbar",
+	"displayName": "GitVersion Status Bar",
 	"description": "Display the actual git version of the current branch.",
-	"version": "0.1.9",
-	"publisher": "HSSE-Development",
+	"version": "0.2.0",
+	"publisher": "jakub-medrzak",
 	"engines": {
 		"vscode": "^1.107.0"
 	},
@@ -15,14 +15,14 @@
 		"Branch"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/HSSE-Dev/GitVersionView",
+	"homepage": "https://github.com/jakub-medrzak/GitVersionView",
 	"bugs": {
-		"url": "https://github.com/HSSE-Dev/GitVersionView/issues",
-		"email": "hsse-development@outlook.com"
+		"url": "https://github.com/jakub-medrzak/GitVersionView/issues",
+		"email": "jakub.medrzak@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/HSSE-Dev/GitVersionView.git"
+		"url": "https://github.com/jakub-medrzak/GitVersionView.git"
 	},
 	"categories": [
 		"Other"

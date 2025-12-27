@@ -1,6 +1,6 @@
 # GitVersion View README
 
-![alt text](https://raw.githubusercontent.com/HSSE-Dev/GitVersionView/master/images/presentation.gif)
+![alt text](https://raw.githubusercontent.com/jakub-medrzak/GitVersionView/master/images/presentation.gif)
 
 GitVersion View displays the current version of the checked out branch in the status bar. The display format can be customized to your needs.</br>
 Unfortunately it is still necessary that GitVersion is installed locally, because the extension accesses it, see [here](#Requirements). </br>
@@ -23,9 +23,9 @@ Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
   Supported: "gitversion", "dotnet-gitversion"
 
 ## For more information
-* [GitHub Issues](https://github.com/HSSE-Dev/GitVersionView/issues)
-* [Email](HSSE-Development@outlook.com)
-* [Link to Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=HSSE-Development.gitversionview)
+* [GitHub Issues](https://github.com/jakub-medrzak/GitVersionView/issues)
+* [Email](jakub.medrzak@gmail.com)
+* [Link to Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=jakub-medrzak.gitversionstatusbar)
 
 -----------------------------------------------------------------------------------------------------------
 
