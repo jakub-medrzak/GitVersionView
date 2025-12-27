@@ -1,4 +1,6 @@
-# GitVersion View README
+# GitVersion Status Bar README
+
+This extension is a fork of [GitVersion View](https://marketplace.visualstudio.com/items?itemName=HSSE-Development.gitversionview) by [HSSE-Dev](https://github.com/HSSE-Dev) 
 
 ![alt text](https://raw.githubusercontent.com/jakub-medrzak/GitVersionView/master/images/presentation.gif)
 
