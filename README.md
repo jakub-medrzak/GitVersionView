@@ -32,6 +32,11 @@ Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
 
 ## Release Notes
 
+## 0.2.0
+- Change configuration options from text fields to dropdowns
+- Switch workflow to GitHub Actions
+- Update extension publisher and name
+
 ## 0.1.9
 - Update packages
 - Added option to change the command of gitversion (e.g. "dotnet-gitversion" instead of "gitversion"). Based on [Added Option to change the command of gitversion #18](https://github.com/HSSE-Dev/GitVersionView/pull/18) by [Florian2406](https://github.com/Florian2406)
