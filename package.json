@@ -42,13 +42,15 @@
 				"properties": {
 					"gitVersionView.versionFormat": {
 						"type": "string",
+						"enum": ["SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"],
 						"default": "SemVer",
-						"description": "Specify the version format. Example: InformationalVersion, SemVer, MajorMinorPatch..."
+						"description": "Specify the version format."
 					},
 					"gitVersionView.command": {
 						"type": "string",
+						"enum": ["gitversion", "dotnet-gitversion"],
 						"default": "gitversion",
-						"description": "Specify the command of gitversion. Example: gitversion, dotnet-gitversion"
+						"description": "Specify the command of gitversion."
 					}
 				}
 			}
