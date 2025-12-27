@@ -24,7 +24,6 @@ Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
 
 ## For more information
 * [GitHub Issues](https://github.com/jakub-medrzak/GitVersionView/issues)
-* [Email](jakub.medrzak@gmail.com)
 * [Link to Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=jakub-medrzak.gitversionstatusbar)
 
 -----------------------------------------------------------------------------------------------------------
