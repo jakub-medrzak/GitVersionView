@@ -1,6 +1,8 @@
-# GitVersion View README
+# GitVersion Status Bar README
 
-![alt text](https://raw.githubusercontent.com/HSSE-Dev/GitVersionView/master/images/presentation.gif)
+This extension is a fork of [GitVersion View](https://marketplace.visualstudio.com/items?itemName=HSSE-Development.gitversionview) by [HSSE-Dev](https://github.com/HSSE-Dev) 
+
+![alt text](https://raw.githubusercontent.com/jakub-medrzak/GitVersionView/master/images/presentation.gif)
 
 GitVersion View displays the current version of the checked out branch in the status bar. The display format can be customized to your needs.</br>
 Unfortunately it is still necessary that GitVersion is installed locally, because the extension accesses it, see [here](#Requirements). </br>
@@ -23,13 +25,17 @@ Supported: "SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"
   Supported: "gitversion", "dotnet-gitversion"
 
 ## For more information
-* [GitHub Issues](https://github.com/HSSE-Dev/GitVersionView/issues)
-* [Email](HSSE-Development@outlook.com)
-* [Link to Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=HSSE-Development.gitversionview)
+* [GitHub Issues](https://github.com/jakub-medrzak/GitVersionView/issues)
+* [Link to Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=jakub-medrzak.gitversionstatusbar)
 
 -----------------------------------------------------------------------------------------------------------
 
 ## Release Notes
+
+## 0.2.0
+- Change configuration options from text fields to dropdowns
+- Switch workflow to GitHub Actions
+- Update extension publisher and name
 
 ## 0.1.9
 - Update packages

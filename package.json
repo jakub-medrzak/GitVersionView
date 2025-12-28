@@ -1,11 +1,11 @@
 {
-	"name": "gitversionview",
-	"displayName": "GitVersion View",
+	"name": "gitversionstatusbar",
+	"displayName": "GitVersion Status Bar",
 	"description": "Display the actual git version of the current branch.",
-	"version": "0.1.9",
-	"publisher": "HSSE-Development",
+	"version": "0.2.0",
+	"publisher": "jakub-medrzak",
 	"engines": {
-		"vscode": "^1.107.0"
+		"vscode": "^1.106.0"
 	},
 	"keywords": [
 		"GIT",
@@ -15,14 +15,14 @@
 		"Branch"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/HSSE-Dev/GitVersionView",
+	"homepage": "https://github.com/jakub-medrzak/GitVersionView",
 	"bugs": {
-		"url": "https://github.com/HSSE-Dev/GitVersionView/issues",
-		"email": "hsse-development@outlook.com"
+		"url": "https://github.com/jakub-medrzak/GitVersionView/issues",
+		"email": "jakub.medrzak@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/HSSE-Dev/GitVersionView.git"
+		"url": "https://github.com/jakub-medrzak/GitVersionView.git"
 	},
 	"categories": [
 		"Other"
@@ -42,13 +42,15 @@
 				"properties": {
 					"gitVersionView.versionFormat": {
 						"type": "string",
+						"enum": ["SemVer", "FullSemVer", "MajorMinorPatch", "InformationalVersion"],
 						"default": "SemVer",
-						"description": "Specify the version format. Example: InformationalVersion, SemVer, MajorMinorPatch..."
+						"description": "Specify the version format."
 					},
 					"gitVersionView.command": {
 						"type": "string",
+						"enum": ["gitversion", "dotnet-gitversion"],
 						"default": "gitversion",
-						"description": "Specify the command of gitversion. Example: gitversion, dotnet-gitversion"
+						"description": "Specify the command of gitversion."
 					}
 				}
 			}
@@ -65,21 +67,14 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src",
-		"test": "vscode-test"
+		"test": "npm run compile && npm run lint",
+		"lint": "eslint src"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.107.0",
-		"@types/mocha": "^10.0.10",
+		"@types/vscode": "^1.106.0",
 		"@types/node": "22.x",
 		"typescript-eslint": "^8.48.1",
 		"eslint": "^9.39.1",
-		"typescript": "^5.9.3",
-		"@vscode/test-cli": "^0.0.12",
-		"@vscode/test-electron": "^2.5.2"
-	},
-	"dependencies": {
-		"@electron/rebuild": "^4.0.2"
+		"typescript": "^5.9.3"
 	}
 }
