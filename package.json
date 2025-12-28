@@ -5,7 +5,7 @@
 	"version": "0.2.0",
 	"publisher": "jakub-medrzak",
 	"engines": {
-		"vscode": "^1.107.0"
+		"vscode": "^1.106.0"
 	},
 	"keywords": [
 		"GIT",
@@ -71,13 +71,10 @@
 		"lint": "eslint src"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.107.0",
+		"@types/vscode": "^1.106.0",
 		"@types/node": "22.x",
 		"typescript-eslint": "^8.48.1",
 		"eslint": "^9.39.1",
 		"typescript": "^5.9.3"
-	},
-	"dependencies": {
-		"@electron/rebuild": "^4.0.2"
 	}
 }
